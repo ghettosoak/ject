@@ -22,6 +22,9 @@ html {
   font-family: u39;
   color: white; }
 
+body {
+  margin: 0px; }
+
 a {
   color: white; }
 
@@ -34,247 +37,340 @@ a {
   background-image: url(../img/textured_paper.png);
   border: 20px white solid; }
 
-a {
-  display: block;
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  left: 50%;
-  top: 50%;
-  margin: -350px 0px 0px -175px;
-  -webkit-transform-origin: 50% 100%;
-  -moz-transform-origin: 50% 100%;
-  -o-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
-  a > div {
-    border-radius: 400px;
-    overflow: hidden;
+@media screen and (min-width: 769px) {
+  a {
+    display: block;
     position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 100%;
+    width: 350px;
+    height: 350px;
     left: 50%;
-    margin: -175px 0px 0px -175px;
+    top: 50%;
+    margin: -350px 0px 0px -175px;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
-    a > div div, a > div p {
-      opacity: 0; }
-    a > div div {
+    a > div {
+      border-radius: 400px;
+      overflow: hidden;
       position: absolute;
-      width: 0px;
-      height: 0px;
+      height: 100%;
+      width: 100%;
+      top: 100%;
+      left: 50%;
+      margin: -175px 0px 0px -175px;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+      a > div div, a > div p {
+        opacity: 0; }
+      a > div div {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%;
+        margin: 0px;
+        border-radius: 400px;
+        opacity: .1;
+        z-index: -2;
+        background-position: center center;
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out; }
+      a > div p {
+        vertical-align: middle;
+        text-align: center;
+        z-index: 2;
+        position: relative;
+        text-transform: uppercase;
+        top: 50px;
+        font-size: 50px;
+        height: 0px;
+        margin: 0px;
+        -webkit-transition-property: top, opacity, text-shadow;
+        -moz-transition-property: top, opacity, text-shadow;
+        -o-transition-property: top, opacity, text-shadow;
+        transition-property: top, opacity, text-shadow;
+        -webkit-transition-duration: 1s, 1s, 1s;
+        -moz-transition-duration: 1s, 1s, 1s;
+        -o-transition-duration: 1s, 1s, 1s;
+        transition-duration: 1s, 1s, 1s;
+        -webkit-transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+        -moz-transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+        -o-transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+        transition-timing-function: ease-in-out, ease-in-out, ease-in-out; }
+
+  .rough #sub {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  .rough #e {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    transform: rotate(60deg); }
+  .rough #in {
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    transform: rotate(120deg); }
+  .rough #pro {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .rough #ob {
+    -webkit-transform: rotate(240deg);
+    -moz-transform: rotate(240deg);
+    -o-transform: rotate(240deg);
+    transform: rotate(240deg); }
+  .rough #tra {
+    -webkit-transform: rotate(300deg);
+    -moz-transform: rotate(300deg);
+    -o-transform: rotate(300deg);
+    transform: rotate(300deg); }
+  .rough a > div {
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%; }
+
+  .ready a > div {
+    -webkit-transition-delay: 0s !important;
+    -moz-transition-delay: 0s !important;
+    -o-transition-delay: 0s !important;
+    transition-delay: 0s !important; }
+    .ready a > div div {
+      width: 100%;
+      height: 100%;
+      margin: -50% 0px 0px -50%; }
+    .ready a > div p {
+      opacity: 1;
+      height: 45px; }
+
+  .rumble a > div div, .rumble a > div p {
+    -webkit-transition-duration: .2s, .2s, .2s !important;
+    -moz-transition-duration: .2s, .2s, .2s !important;
+    -o-transition-duration: .2s, .2s, .2s !important;
+    transition-duration: .2s, .2s, .2s !important; }
+
+  a:hover > div {
+    height: 400px !important;
+    width: 400px !important;
+    margin: -200px 0px 0px -200px; }
+    a:hover > div div {
+      opacity: 1; }
+    a:hover > div p {
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+      top: 75px; }
+
+  #sub {
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s; }
+    #sub > div {
+      background-color: rgba(237, 28, 36, 0.5); }
+      #sub > div div {
+        background-image: url(../img/sub.png); }
+      #sub > div div, #sub > div p {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg); }
+    #sub:hover div {
+      background-color: rgba(237, 28, 36, 0); }
+
+  #e {
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s; }
+    #e > div {
+      background-color: rgba(241, 90, 41, 0.5); }
+      #e > div div {
+        background-image: url(../img/e.png); }
+      #e > div div, #e > div p {
+        -webkit-transform: rotate(-60deg);
+        -moz-transform: rotate(-60deg);
+        -o-transform: rotate(-60deg);
+        transform: rotate(-60deg); }
+    #e:hover div {
+      background-color: rgba(255, 242, 0, 0); }
+
+  #in {
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s; }
+    #in > div {
+      background-color: rgba(255, 242, 0, 0.5); }
+      #in > div div {
+        background-image: url(../img/in.png); }
+      #in > div div, #in > div p {
+        -webkit-transform: rotate(-120deg);
+        -moz-transform: rotate(-120deg);
+        -o-transform: rotate(-120deg);
+        transform: rotate(-120deg); }
+    #in:hover div {
+      background-color: rgba(0, 166, 81, 0); }
+
+  #pro {
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s; }
+    #pro > div {
+      background-color: rgba(0, 166, 81, 0.5); }
+      #pro > div div {
+        background-image: url(../img/pro.png); }
+      #pro > div div, #pro > div p {
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        transform: rotate(-180deg); }
+    #pro:hover div {
+      background-color: rgba(0, 174, 239, 0); }
+
+  #ob {
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s; }
+    #ob > div {
+      background-color: rgba(0, 174, 239, 0.5); }
+      #ob > div div {
+        background-image: url(../img/ob.png); }
+      #ob > div div, #ob > div p {
+        -webkit-transform: rotate(-240deg);
+        -moz-transform: rotate(-240deg);
+        -o-transform: rotate(-240deg);
+        transform: rotate(-240deg); }
+    #ob:hover div {
+      background-color: rgba(46, 49, 146, 0); }
+
+  #tra {
+    -webkit-transition-delay: 0.6s;
+    -moz-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s; }
+    #tra > div {
+      background-color: rgba(46, 49, 146, 0.5); }
+      #tra > div div {
+        background-image: url(../img/pro.png); }
+      #tra > div div, #tra > div p {
+        -webkit-transform: rotate(-300deg);
+        -moz-transform: rotate(-300deg);
+        -o-transform: rotate(-300deg);
+        transform: rotate(-300deg); }
+    #tra:hover div {
+      background-color: rgba(46, 49, 146, 0); }
+
+  .colophon {
+    position: fixed;
+    bottom: 5px;
+    right: 100px;
+    margin: 0px;
+    font-size: 50px; } }
+@media screen and (max-width: 768px) {
+  a {
+    display: block;
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 33.333333%;
+    left: 0px;
+    margin-top: -5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    a > div {
+      position: absolute;
+      overflow: hidden;
+      display: table;
+      height: 100px;
+      width: 100px;
       top: 50%;
       left: 50%;
-      margin: 0px;
-      border-radius: 400px;
-      opacity: .1;
-      z-index: -2;
-      background-position: center center;
+      margin: -50px 0px 0px -50px;
+      border-radius: 100px;
+      opacity: 0;
       -webkit-transition: all 1s ease-in-out;
       -moz-transition: all 1s ease-in-out;
       -o-transition: all 1s ease-in-out;
-      transition: all 1s ease-in-out; }
-    a > div p {
-      vertical-align: middle;
-      text-align: center;
-      z-index: 2;
-      position: relative;
-      text-transform: uppercase;
-      top: 50px;
-      font-size: 50px;
-      height: 0px;
-      margin: 0px;
-      -webkit-transition-property: top, opacity, text-shadow;
-      -moz-transition-property: top, opacity, text-shadow;
-      -o-transition-property: top, opacity, text-shadow;
-      transition-property: top, opacity, text-shadow;
-      -webkit-transition-duration: 1s, 1s, 1s;
-      -moz-transition-duration: 1s, 1s, 1s;
-      -o-transition-duration: 1s, 1s, 1s;
-      transition-duration: 1s, 1s, 1s;
-      -webkit-transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
-      -moz-transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
-      -o-transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
-      transition-timing-function: ease-in-out, ease-in-out, ease-in-out; }
+      transition: all 1s ease-in-out;
+      background-position: center center;
+      background-size: cover; }
+      a > div div {
+        position: absolute;
+        overflow: hidden;
+        border-radius: 100px;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: 2; }
+      a > div p {
+        display: table-cell;
+        vertical-align: middle;
+        z-index: 4;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        font-size: 40px;
+        margin: 0px; }
 
-.rough #sub {
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg); }
-.rough #e {
-  -webkit-transform: rotate(60deg);
-  -moz-transform: rotate(60deg);
-  -o-transform: rotate(60deg);
-  transform: rotate(60deg); }
-.rough #in {
-  -webkit-transform: rotate(120deg);
-  -moz-transform: rotate(120deg);
-  -o-transform: rotate(120deg);
-  transform: rotate(120deg); }
-.rough #pro {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg); }
-.rough #ob {
-  -webkit-transform: rotate(240deg);
-  -moz-transform: rotate(240deg);
-  -o-transform: rotate(240deg);
-  transform: rotate(240deg); }
-.rough #tra {
-  -webkit-transform: rotate(300deg);
-  -moz-transform: rotate(300deg);
-  -o-transform: rotate(300deg);
-  transform: rotate(300deg); }
-.rough a > div {
-  height: 100%;
-  width: 100%;
-  top: 50%;
-  left: 50%; }
-
-.ready a > div {
-  -webkit-transition-delay: 0s !important;
-  -moz-transition-delay: 0s !important;
-  -o-transition-delay: 0s !important;
-  transition-delay: 0s !important; }
-  .ready a > div div {
-    width: 100%;
-    height: 100%;
-    margin: -50% 0px 0px -50%; }
-  .ready a > div p {
-    opacity: 1;
-    height: 45px; }
-
-.rumble a > div div, .rumble a > div p {
-  -webkit-transition-duration: .2s, .2s, .2s !important;
-  -moz-transition-duration: .2s, .2s, .2s !important;
-  -o-transition-duration: .2s, .2s, .2s !important;
-  transition-duration: .2s, .2s, .2s !important; }
-
-a:hover > div {
-  height: 400px !important;
-  width: 400px !important;
-  margin: -200px 0px 0px -200px; }
-  a:hover > div div {
+  .ready a > div {
     opacity: 1; }
-  a:hover > div p {
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
-    top: 75px; }
 
-#sub {
-  -webkit-transition-delay: 0.1s;
-  -moz-transition-delay: 0.1s;
-  -o-transition-delay: 0.1s;
-  transition-delay: 0.1s; }
   #sub > div {
-    background-color: rgba(237, 28, 36, 0.5); }
+    background-image: url(../img/sub.png); }
     #sub > div div {
-      background-image: url(../img/sub.png); }
-    #sub > div div, #sub > div p {
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg); }
-  #sub:hover div {
-    background-color: rgba(237, 28, 36, 0); }
+      background-color: rgba(237, 28, 36, 0.5); }
 
-#e {
-  -webkit-transition-delay: 0.2s;
-  -moz-transition-delay: 0.2s;
-  -o-transition-delay: 0.2s;
-  transition-delay: 0.2s; }
   #e > div {
-    background-color: rgba(241, 90, 41, 0.5); }
+    background-image: url(../img/e.png); }
     #e > div div {
-      background-image: url(../img/e.png); }
-    #e > div div, #e > div p {
-      -webkit-transform: rotate(-60deg);
-      -moz-transform: rotate(-60deg);
-      -o-transform: rotate(-60deg);
-      transform: rotate(-60deg); }
-  #e:hover div {
-    background-color: rgba(255, 242, 0, 0); }
+      background-color: rgba(241, 90, 41, 0.5); }
 
-#in {
-  -webkit-transition-delay: 0.3s;
-  -moz-transition-delay: 0.3s;
-  -o-transition-delay: 0.3s;
-  transition-delay: 0.3s; }
   #in > div {
-    background-color: rgba(255, 242, 0, 0.5); }
+    background-image: url(../img/in.png); }
     #in > div div {
-      background-image: url(../img/in.png); }
-    #in > div div, #in > div p {
-      -webkit-transform: rotate(-120deg);
-      -moz-transform: rotate(-120deg);
-      -o-transform: rotate(-120deg);
-      transform: rotate(-120deg); }
-  #in:hover div {
-    background-color: rgba(0, 166, 81, 0); }
+      background-color: rgba(255, 242, 0, 0.5); }
 
-#pro {
-  -webkit-transition-delay: 0.4s;
-  -moz-transition-delay: 0.4s;
-  -o-transition-delay: 0.4s;
-  transition-delay: 0.4s; }
   #pro > div {
-    background-color: rgba(0, 166, 81, 0.5); }
+    background-image: url(../img/pro.png); }
     #pro > div div {
-      background-image: url(../img/pro.png); }
-    #pro > div div, #pro > div p {
-      -webkit-transform: rotate(-180deg);
-      -moz-transform: rotate(-180deg);
-      -o-transform: rotate(-180deg);
-      transform: rotate(-180deg); }
-  #pro:hover div {
-    background-color: rgba(0, 174, 239, 0); }
+      background-color: rgba(0, 166, 81, 0.5); }
 
-#ob {
-  -webkit-transition-delay: 0.5s;
-  -moz-transition-delay: 0.5s;
-  -o-transition-delay: 0.5s;
-  transition-delay: 0.5s; }
   #ob > div {
-    background-color: rgba(0, 174, 239, 0.5); }
+    background-image: url(../img/ob.png); }
     #ob > div div {
-      background-image: url(../img/ob.png); }
-    #ob > div div, #ob > div p {
-      -webkit-transform: rotate(-240deg);
-      -moz-transform: rotate(-240deg);
-      -o-transform: rotate(-240deg);
-      transform: rotate(-240deg); }
-  #ob:hover div {
-    background-color: rgba(46, 49, 146, 0); }
+      background-color: rgba(0, 174, 239, 0.5); }
 
-#tra {
-  -webkit-transition-delay: 0.6s;
-  -moz-transition-delay: 0.6s;
-  -o-transition-delay: 0.6s;
-  transition-delay: 0.6s; }
   #tra > div {
-    background-color: rgba(46, 49, 146, 0.5); }
+    background-image: url(../img/pro.png); }
     #tra > div div {
-      background-image: url(../img/pro.png); }
-    #tra > div div, #tra > div p {
-      -webkit-transform: rotate(-300deg);
-      -moz-transform: rotate(-300deg);
-      -o-transform: rotate(-300deg);
-      transform: rotate(-300deg); }
-  #tra:hover div {
-    background-color: rgba(46, 49, 146, 0); }
+      background-color: rgba(46, 49, 146, 0.5); }
 
-.colophon {
-  position: fixed;
-  bottom: 5px;
-  right: 100px;
-  margin: 0px;
-  font-size: 50px; }
-
+  .colophon {
+    position: fixed;
+    bottom: 5px;
+    right: 30px;
+    margin: 0px;
+    font-size: 50px; } }
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  a {
+    height: 50%;
+    width: 33.333333%; } }
 @-moz-document url-prefix() {}
