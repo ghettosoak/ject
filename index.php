@@ -17,18 +17,12 @@
 
 <body>
 	<div id="orbital">
-		<a href="http://sub.ject.ch/" id="sub" target="_blank">
+		
+		<a href="http://ob.ject.ch/" id="ob" target="_blank">
 			<div>
 				<div>
 				</div>
-				<p>sub.ject</p>
-			</div>
-		</a>
-		<a href="http://e.ject.ch/" id="e" target="_blank">
-			<div>
-				<div>
-				</div>
-				<p>e.ject</p>
+				<p>ob.ject</p>
 			</div>
 		</a>
 		<a href="http://in.ject.ch/" id="in" target="_blank">
@@ -38,6 +32,20 @@
 				<p>in.ject</p>
 			</div>
 		</a>
+		<a href="http://tra.ject.ch/" id="tra" target="_blank">
+			<div>
+				<div>
+				</div>
+				<p>tra.ject</p>
+			</div>
+		</a>
+		<a href="http://e.ject.ch/" id="e" target="_blank">
+			<div>
+				<div>
+				</div>
+				<p>e.ject</p>
+			</div>
+		</a>
 		<a href="http://pro.ject.ch/" id="pro" target="_blank">
 			<div>
 				<div>
@@ -45,18 +53,11 @@
 				<p>pro.ject</p>
 			</div>
 		</a>
-		<a href="http://ob.ject.ch/" id="ob" target="_blank">
+		<a href="http://sub.ject.ch/" id="sub" target="_blank">
 			<div>
 				<div>
 				</div>
-				<p>ob.ject</p>
-			</div>
-		</a>
-		<a href="http://tra.ject.ch/" id="tra" target="_blank">
-			<div>
-				<div>
-				</div>
-				<p>tra.ject</p>
+				<p>sub.ject</p>
 			</div>
 		</a>
 		<p class="colophon">mf</p>

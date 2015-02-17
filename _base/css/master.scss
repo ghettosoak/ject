@@ -110,7 +110,7 @@ a{color:white;}
 		top:50%;
 		margin:-350px 0px 0px -175px;
 		@include t_origin(50%, 100%);
-		@include transition(all, .2s, ease-in-out);
+		
 		&>div {
 			border-radius:400px;
 			overflow:hidden;
@@ -154,24 +154,27 @@ a{color:white;}
 	}
 
 	.rough{
-		#sub{ @include transform(rotate(0*60deg)); }
-		#e{ @include transform(rotate(1*60deg)); }
-		#in{ @include transform(rotate(2*60deg)); }
-		#pro{ @include transform(rotate(3*60deg)); }
-		#ob{ @include transform(rotate(4*60deg)); }
-		#tra{ @include transform(rotate(5*60deg)); }
-		a>div{
-			height:100%;
-			width:100%;
-			top:50%;
-			left:50%;
+		
+		#ob{ @include transform(rotate(0*60deg)); }
+		#in{ @include transform(rotate(1*60deg)); }
+		#tra{ @include transform(rotate(2*60deg)); }
+		#e{ @include transform(rotate(3*60deg)); }
+		#pro{ @include transform(rotate(4*60deg)); }
+		#sub{ @include transform(rotate(5*60deg)); }
+		a{
+			@include transition(all, .2s, ease-in-out);
+			&>div{
+				height:100%;
+				width:100%;
+				top:50%;
+				left:50%;
+			}
 		}
 	}
 
 	.ready a{
 		&>div{
 			@include delay(0s !important);
-			// 
 			div{
 				width:100%;
 				height:100%;
@@ -201,59 +204,60 @@ a{color:white;}
 		}
 	}
 
-	#sub{//ANORB
-		@include delay(.1s);
+	
+	#ob{ //ANORB
+		@include delay(.0s);
 		&>div{
-			background-color:rgba(237,28,36,.5);
-			div{background-image:url(../img/sub.png); }  
+			background-color: rgba(237, 28, 36, 0.5);
+			div{background-image:url(../img/ob.png); }  
 			div, p{ @include transform(rotate(-0*60deg)); }
 		}
-		&:hover div{ background-color:rgba(237,28,36,0); }
-	}
-	#e{  //ANORB
-		@include delay(.2s);
-		&>div{
-			background-color:rgba(241,90,41,.5);
-			div{background-image:url(../img/e.png); }  
-			div, p{ @include transform(rotate(-1*60deg)); }
-		}
-		&:hover div{ background-color:rgba(255,242,0,0); }
+		&:hover div{ background-color: rgba(237, 28, 36, 0); }
 	}
 	#in{ //ANORB
-		@include delay(.3s);
+		@include delay(.1s);
 		&>div{
-			background-color:rgba(255,242,0,.5);
+			background-color: rgba(241, 90, 41, 0.5);
 			div{background-image:url(../img/in.png); }  
+			div, p{ @include transform(rotate(-1*60deg)); }
+		}
+		&:hover div{ background-color: rgba(241, 90, 41, 0);}
+	}
+	#tra{ //ANORB
+		@include delay(.2s);
+		&>div{
+			background-color: rgba(255, 242, 0, 0.5);
+			div{background-image:url(../img/tra.jpg); }  
 			div, p{ @include transform(rotate(-2*60deg)); }
 		}
-		&:hover div{ background-color:rgba(0,166,81,0); }
+		&:hover div{ background-color: rgba(255, 242, 0, 0); }
+	}
+	#e{  //ANORB
+		@include delay(.3s);
+		&>div{
+			background-color: rgba(0, 166, 81, 0.5);
+			div{background-image:url(../img/e.png); }  
+			div, p{ @include transform(rotate(-3*60deg)); }
+		}
+		&:hover div{ background-color: rgba(0, 166, 81, 0);; }
 	}
 	#pro{//ANORB
 		@include delay(.4s);
 		&>div{
-			background-color:rgba(0,166,81,.5);
-			div{background-image:url(../img/pro.png); }  
-			div, p{ @include transform(rotate(-3*60deg)); }
-		}
-		&:hover div{ background-color:rgba(0,174,239,0); }
-	}
-	#ob{ //ANORB
-		@include delay(.5s);
-		&>div{
-			background-color:rgba(0,174,239,.5);
-			div{background-image:url(../img/ob.png); }  
+			background-color: rgba(0, 174, 239, 0.5);
+			div{background-image:url(../img/pro.jpg); }  
 			div, p{ @include transform(rotate(-4*60deg)); }
 		}
-		&:hover div{ background-color:rgba(46,49,146,0); }
+		&:hover div{ background-color: rgba(0, 174, 239, 0); }
 	}
-	#tra{ //ANORB
-		@include delay(.6s);
+	#sub{//ANORB
+		@include delay(.5s);
 		&>div{
-			background-color:rgba(46,49,146,.5);
-			div{background-image:url(../img/pro.png); }  
+			background-color: rgba(46, 49, 146, 0.5);
+			div{background-image:url(../img/sub.jpg); }  
 			div, p{ @include transform(rotate(-5*60deg)); }
 		}
-		&:hover div{ background-color:rgba(46,49,146,0); }
+		&:hover div{ background-color: rgba(46, 49, 146, 0); }
 	}
 
 	.colophon{
@@ -324,22 +328,13 @@ a{color:white;}
 			opacity:1;
 		}
 	}
-
-
-
-	#sub{//AMOBILEORB
+	
+	
+	#ob{ //AMOBILEORB
 		&>div{
-			background-image:url(../img/sub.png); 
+			background-image:url(../img/ob.png); 
 			div{
-				background-color:rgba(237,28,36,.5);
-			}
-		}
-	}
-	#e{  //AMOBILEORB
-		&>div{
-			background-image:url(../img/e.png); 
-			div{
-				background-color:rgba(241,90,41,.5);
+				background-color: rgba(237, 28, 36, 0.5);
 			}
 		}
 	}
@@ -347,7 +342,23 @@ a{color:white;}
 		&>div{
 			background-image:url(../img/in.png); 
 			div{
-				background-color:rgba(255,242,0,.5);
+				background-color: rgba(241, 90, 41, 0.5);
+			}
+		}
+	}
+	#tra{ //AMOBILEORB
+		&>div{
+			background-image:url(../img/tra.jpg); 
+			div{
+				background-color: rgba(255, 242, 0, 0.5);
+			}
+		}
+	}
+	#e{  //AMOBILEORB
+		&>div{
+			background-image:url(../img/e.png); 
+			div{
+				background-color: rgba(0, 166, 81, 0.5);
 			}
 		}
 	}
@@ -355,23 +366,15 @@ a{color:white;}
 		&>div{
 			background-image:url(../img/pro.png); 
 			div{
-				background-color:rgba(0,166,81,.5);
+				background-color: rgba(0, 174, 239, 0.5);
 			}
 		}
 	}
-	#ob{ //AMOBILEORB
+	#sub{//AMOBILEORB
 		&>div{
-			background-image:url(../img/ob.png); 
+			background-image:url(../img/sub.png); 
 			div{
-				background-color:rgba(0,174,239,.5);
-			}
-		}
-	}
-	#tra{ //AMOBILEORB
-		&>div{
-			background-image:url(../img/pro.png); 
-			div{
-				background-color:rgba(46,49,146,.5);
+				background-color: rgba(46, 49, 146, 0.5);
 			}
 		}
 	}
