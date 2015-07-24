@@ -1,0 +1,520 @@
+@font-face {
+  font-family: 'karlabold';
+  src: url('../type/karla-bold-webfont.eot');
+  src: url('../type/karla-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../type/karla-bold-webfont.woff') format('woff'), url('../type/karla-bold-webfont.ttf') format('truetype'), url('../type/karla-bold-webfont.svg#karlabold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'karlaregular';
+  src: url('../type/karla-regular-webfont.eot');
+  src: url('../type/karla-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../type/karla-regular-webfont.woff') format('woff'), url('../type/karla-regular-webfont.ttf') format('truetype'), url('../type/karla-regular-webfont.svg#karlaregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body {
+  height: 100%;
+  color: white;
+  font-family: karlaregular;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+}
+.outvert,
+.invert {
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.invert {
+  opacity: 0;
+  visibility: hidden;
+}
+.inverse .invert {
+  opacity: 1;
+  visibility: visible;
+}
+.border {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  background-color: white;
+  z-index: 1;
+  min-height: 100%;
+  height: 1288px;
+}
+@media screen and (min-width: 735px) {
+  .border {
+    height: 1062px;
+  }
+}
+@media screen and (min-width: 950px) {
+  .border {
+    height: 780px;
+  }
+}
+@media screen and (min-width: 1530px) {
+  .border {
+    height: 686px;
+  }
+}
+.inverse .border {
+  -webkit-transition: background-color 10s linear;
+  -moz-transition: background-color 10s linear;
+  -o-transition: background-color 10s linear;
+  transition: background-color 10s linear;
+  background-color: #ee3246;
+}
+.red .inverse .border {
+  background-color: #ee3246;
+}
+.yellow .inverse .border {
+  background-color: #e3bd0c;
+}
+.green .inverse .border {
+  background-color: #57b947;
+}
+.blue .inverse .border {
+  background-color: #51baea;
+}
+.violet .inverse .border {
+  background-color: #5e5eaa;
+}
+.pink .inverse .border {
+  background-color: #d79cc6;
+}
+.inverting .border {
+  -webkit-transition: background-color 0.5s ease !important;
+  -moz-transition: background-color 0.5s ease !important;
+  -o-transition: background-color 0.5s ease !important;
+  transition: background-color 0.5s ease !important;
+}
+.main {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  min-height: calc(100% - 60px);
+  width: calc(100% - 60px);
+  padding: 0px 15px;
+  cursor: default;
+  z-index: 2;
+  margin-bottom: -1128px;
+  -webkit-transition: background-color 10s linear;
+  -moz-transition: background-color 10s linear;
+  -o-transition: background-color 10s linear;
+  transition: background-color 10s linear;
+  background-color: #ee3246;
+}
+@media screen and (min-width: 735px) {
+  .main {
+    margin-bottom: -752px;
+  }
+}
+@media screen and (min-width: 950px) {
+  .main {
+    margin-bottom: -470px;
+  }
+}
+@media screen and (min-width: 1530px) {
+  .main {
+    margin-bottom: -376px;
+  }
+}
+.main:after {
+  content: '';
+  display: block;
+  height: 1128px;
+}
+@media screen and (min-width: 735px) {
+  .main:after {
+    height: 752px;
+  }
+}
+@media screen and (min-width: 950px) {
+  .main:after {
+    height: 470px;
+  }
+}
+@media screen and (min-width: 1530px) {
+  .main:after {
+    height: 376px;
+  }
+}
+.red .main {
+  background-color: #ee3246;
+}
+.yellow .main {
+  background-color: #e3bd0c;
+}
+.green .main {
+  background-color: #57b947;
+}
+.blue .main {
+  background-color: #51baea;
+}
+.violet .main {
+  background-color: #5e5eaa;
+}
+.pink .main {
+  background-color: #d79cc6;
+}
+.inverse .main {
+  background-color: white !important;
+}
+.inverting .main {
+  -webkit-transition: background-color 0.5s ease !important;
+  -moz-transition: background-color 0.5s ease !important;
+  -o-transition: background-color 0.5s ease !important;
+  transition: background-color 0.5s ease !important;
+}
+h1,
+h2 {
+  font-family: karlabold;
+  font-weight: normal;
+  margin: 0;
+}
+.title {
+  position: relative;
+  padding: 0 15px;
+  height: 100px;
+}
+@media screen and (min-width: 735px) {
+  .title {
+    height: 250px;
+  }
+}
+.title p {
+  position: absolute;
+  color: white;
+  bottom: -50px;
+  left: 10px;
+}
+@media screen and (min-width: 735px) {
+  .title p {
+    bottom: -5px;
+    left: 90px;
+  }
+}
+.inverse .title p {
+  -webkit-transition: color 10s linear;
+  -moz-transition: color 10s linear;
+  -o-transition: color 10s linear;
+  transition: color 10s linear;
+  color: #ee3246;
+}
+.red .inverse .title p {
+  color: #ee3246;
+}
+.yellow .inverse .title p {
+  color: #e3bd0c;
+}
+.green .inverse .title p {
+  color: #57b947;
+}
+.blue .inverse .title p {
+  color: #51baea;
+}
+.violet .inverse .title p {
+  color: #5e5eaa;
+}
+.pink .inverse .title p {
+  color: #d79cc6;
+}
+.inverting .title p {
+  -webkit-transition: color 0.5s ease !important;
+  -moz-transition: color 0.5s ease !important;
+  -o-transition: color 0.5s ease !important;
+  transition: color 0.5s ease !important;
+}
+h1 {
+  font-size: 50px;
+  line-height: 100px;
+  color: white;
+}
+@media screen and (min-width: 735px) {
+  h1 {
+    font-size: 200px;
+    line-height: 250px;
+  }
+}
+.inverse h1 {
+  -webkit-transition: color 10s linear;
+  -moz-transition: color 10s linear;
+  -o-transition: color 10s linear;
+  transition: color 10s linear;
+  color: #ee3246;
+}
+.red .inverse h1 {
+  color: #ee3246;
+}
+.yellow .inverse h1 {
+  color: #e3bd0c;
+}
+.green .inverse h1 {
+  color: #57b947;
+}
+.blue .inverse h1 {
+  color: #51baea;
+}
+.violet .inverse h1 {
+  color: #5e5eaa;
+}
+.pink .inverse h1 {
+  color: #d79cc6;
+}
+.inverting h1 {
+  -webkit-transition: color 0.5s ease !important;
+  -moz-transition: color 0.5s ease !important;
+  -o-transition: color 0.5s ease !important;
+  transition: color 0.5s ease !important;
+}
+.grid {
+  position: absolute;
+  width: calc(100% - 20px);
+  bottom: 91px;
+  left: 10px;
+}
+a {
+  color: white;
+  position: relative;
+  float: left;
+  text-decoration: none;
+  padding: 0 15px;
+  width: 100%;
+}
+@media screen and (min-width: 735px) {
+  a {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 950px) {
+  a {
+    width: 33.33333%;
+  }
+}
+@media screen and (min-width: 1530px) {
+  a {
+    width: 20%;
+  }
+}
+a:hover .hover {
+  height: 100%;
+}
+.inverse a {
+  -webkit-transition: color 10s linear;
+  -moz-transition: color 10s linear;
+  -o-transition: color 10s linear;
+  transition: color 10s linear;
+  color: #ee3246;
+}
+.red .inverse a {
+  color: #ee3246;
+}
+.yellow .inverse a {
+  color: #e3bd0c;
+}
+.green .inverse a {
+  color: #57b947;
+}
+.blue .inverse a {
+  color: #51baea;
+}
+.violet .inverse a {
+  color: #5e5eaa;
+}
+.pink .inverse a {
+  color: #d79cc6;
+}
+.inverting a {
+  -webkit-transition: color 0.5s ease !important;
+  -moz-transition: color 0.5s ease !important;
+  -o-transition: color 0.5s ease !important;
+  transition: color 0.5s ease !important;
+}
+.show {
+  z-index: 1;
+}
+.hover {
+  width: calc(100% - 30px);
+  position: absolute;
+  height: 1px;
+  overflow: hidden;
+  top: 0;
+  left: 15px;
+  z-index: 2;
+  background-color: white;
+  -webkit-transition: height .25s ease, color 10s linear;
+  -moz-transition: height .25s ease, color 10s linear;
+  -o-transition: height .25s ease, color 10s linear;
+  transition: height .25s ease, color 10s linear;
+  color: #ee3246;
+}
+.red .hover {
+  color: #ee3246;
+}
+.yellow .hover {
+  color: #e3bd0c;
+}
+.green .hover {
+  color: #57b947;
+}
+.blue .hover {
+  color: #51baea;
+}
+.violet .hover {
+  color: #5e5eaa;
+}
+.pink .hover {
+  color: #d79cc6;
+}
+.inverse .hover {
+  color: white !important;
+  -webkit-transition: height .25s ease, background-color 10s linear;
+  -moz-transition: height .25s ease, background-color 10s linear;
+  -o-transition: height .25s ease, background-color 10s linear;
+  transition: height .25s ease, background-color 10s linear;
+  background-color: #ee3246;
+}
+.red .inverse .hover {
+  background-color: #ee3246;
+}
+.yellow .inverse .hover {
+  background-color: #e3bd0c;
+}
+.green .inverse .hover {
+  background-color: #57b947;
+}
+.blue .inverse .hover {
+  background-color: #51baea;
+}
+.violet .inverse .hover {
+  background-color: #5e5eaa;
+}
+.pink .inverse .hover {
+  background-color: #d79cc6;
+}
+.inverting .hover {
+  -webkit-transition: height .25s ease, background-color .5s linear, color .5s ease !important;
+  -moz-transition: height .25s ease, background-color .5s linear, color .5s ease !important;
+  -o-transition: height .25s ease, background-color .5s linear, color .5s ease !important;
+  transition: height .25s ease, background-color .5s linear, color .5s ease !important;
+}
+h2 {
+  font-size: 24px;
+  padding: 29px 0 2px;
+}
+p {
+  font-size: 12px;
+  margin: 0;
+  padding: 3px 0 25px;
+}
+.footer {
+  width: calc(100% - 50px);
+  height: 91px;
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  border-top: 1px solid;
+  border-color: white;
+  font-size: 12px;
+  color: white;
+}
+.inverse .footer {
+  -webkit-transition: color 10s linear, border-color 10s linear;
+  -moz-transition: color 10s linear, border-color 10s linear;
+  -o-transition: color 10s linear, border-color 10s linear;
+  transition: color 10s linear, border-color 10s linear;
+  color: #ee3246;
+  border-color: #ee3246;
+}
+.red .inverse .footer {
+  color: #ee3246;
+  border-color: #ee3246;
+}
+.yellow .inverse .footer {
+  color: #e3bd0c;
+  border-color: #e3bd0c;
+}
+.green .inverse .footer {
+  color: #57b947;
+  border-color: #57b947;
+}
+.blue .inverse .footer {
+  color: #51baea;
+  border-color: #51baea;
+}
+.violet .inverse .footer {
+  color: #5e5eaa;
+  border-color: #5e5eaa;
+}
+.pink .inverse .footer {
+  color: #d79cc6;
+  border-color: #d79cc6;
+}
+.inverting .footer {
+  -webkit-transition: color .5s linear, border-color .5s linear !important;
+  -moz-transition: color .5s linear, border-color .5s linear !important;
+  -o-transition: color .5s linear, border-color .5s linear !important;
+  transition: color .5s linear, border-color .5s linear !important;
+}
+.footer .heart {
+  position: relative;
+  fill: white;
+  width: 20px;
+  height: 43px;
+  margin-top: 20px;
+}
+.inverse .footer .heart {
+  -webkit-transition: fill 10s linear;
+  -moz-transition: fill 10s linear;
+  -o-transition: fill 10s linear;
+  transition: fill 10s linear;
+  fill: #ee3246;
+}
+.red .inverse .footer .heart {
+  fill: #ee3246;
+}
+.yellow .inverse .footer .heart {
+  fill: #e3bd0c;
+}
+.green .inverse .footer .heart {
+  fill: #57b947;
+}
+.blue .inverse .footer .heart {
+  fill: #51baea;
+}
+.violet .inverse .footer .heart {
+  fill: #5e5eaa;
+}
+.pink .inverse .footer .heart {
+  fill: #d79cc6;
+}
+.inverting .footer .heart {
+  -webkit-transition: fill 0.5s ease !important;
+  -moz-transition: fill 0.5s ease !important;
+  -o-transition: fill 0.5s ease !important;
+  transition: fill 0.5s ease !important;
+}
+.footer .copyright {
+  float: right;
+  margin-top: 32px;
+}

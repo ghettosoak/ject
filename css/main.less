@@ -1,0 +1,441 @@
+.transition(@what){
+	-webkit-transition: @what;
+	-moz-transition: @what;
+	-o-transition: @what;
+	transition: @what;
+}
+
+.transitionOverride(@what){
+	-webkit-transition: @what !important;
+	-moz-transition: @what !important;
+	-o-transition: @what !important;
+	transition: @what !important;
+}
+
+@font-face {
+	font-family: 'karlabold';
+	src: url('../type/karla-bold-webfont.eot');
+	src: url('../type/karla-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../type/karla-bold-webfont.woff') format('woff'),
+		url('../type/karla-bold-webfont.ttf') format('truetype'),
+		url('../type/karla-bold-webfont.svg#karlabold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'karlaregular';
+	src: url('../type/karla-regular-webfont.eot');
+	src: url('../type/karla-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../type/karla-regular-webfont.woff') format('woff'),
+		url('../type/karla-regular-webfont.ttf') format('truetype'),
+		url('../type/karla-regular-webfont.svg#karlaregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// @font-face {
+// 	font-family: 'karlaregular';
+// 	src: url('../type/03_roboto_regular/Roboto-Regular-webfont.eot');
+// 	src: url('../type/03_roboto_regular/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+// 		 url('../type/03_roboto_regular/Roboto-Regular-webfont.woff') format('woff'),
+// 		 url('../type/03_roboto_regular/Roboto-Regular-webfont.ttf') format('truetype'),
+// 		 url('../type/03_roboto_regular/Roboto-Regular-webfont.svg#karlabold') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+// @font-face {
+// 	font-family: 'karlabold';
+// 	src: url('../type/05_roboto_bold/Roboto-Bold-webfont.eot');
+// 	src: url('../type/05_roboto_bold/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+// 		 url('../type/05_roboto_bold/Roboto-Bold-webfont.woff') format('woff'),
+// 		 url('../type/05_roboto_bold/Roboto-Bold-webfont.ttf') format('truetype'),
+// 		 url('../type/05_roboto_bold/Roboto-Bold-webfont.svg#karlaregular') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+@red:    rgb(238, 50, 70);
+@yellow: rgb(227, 189, 12);
+@green:  rgb(87, 185, 71);
+@blue:   rgb(81, 186, 234);
+@violet: rgb(94, 94, 170);
+@pink:   rgb(215, 156, 198);
+
+// @one:   ~'screen and (max-width: 500px)';
+// @two:   ~'screen and (min-width: 660px)';
+@two:   ~'screen and (min-width: 735px)';
+@three: ~'screen and (min-width: 950px)';
+@five:  ~'screen and (min-width: 1530px)';
+
+@titleHeight_large: 250px;
+@titleHeight_small: 100px;
+
+@linkHeight: 94px;
+
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+html,
+body{ 
+	height:100%;
+	color: white;
+	font-family: karlaregular;
+	font-size: 12px;
+	line-height: 18px;	
+	margin: 0;
+}
+
+.outvert,
+.invert{
+	position: absolute;
+	min-height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	opacity: 1;
+	visibility: visible;
+	.transition(all .5s ease);
+}
+
+.invert{
+	opacity: 0;
+	visibility: hidden;
+	.inverse &{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.border{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	background-color: white;
+	z-index: 1;
+
+	min-height: 100%;
+
+	height: (@linkHeight * 12) + 60 + @titleHeight_small;
+
+	@media @two   { height: (@linkHeight * 8) + 60 + @titleHeight_large; }
+	@media @three { height: (@linkHeight * 5) + 60 + @titleHeight_large; }
+	@media @five  { height: (@linkHeight * 4) + 60 + @titleHeight_large; }
+
+	.inverse &{
+
+		.transition(background-color 10s linear);
+
+		background-color: @red;
+
+		.red &    { background-color: @red; }
+		.yellow & { background-color: @yellow; }
+		.green &  { background-color: @green; }
+		.blue &   { background-color: @blue; }
+		.violet & { background-color: @violet; }
+		.pink &   { background-color: @pink; }
+	}
+
+	.inverting &{
+		.transitionOverride(background-color .5s ease);
+	}
+}
+
+.main{
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	min-height: ~'calc(100% - 60px)';
+	width: ~'calc(100% - 60px)';
+	padding: 0px 15px;
+	cursor: default;
+	z-index: 2;
+
+	margin-bottom: -@linkHeight * 12; 
+
+	@media @two   { margin-bottom: -@linkHeight * 8; }
+	@media @three { margin-bottom: -@linkHeight * 5; }
+	@media @five  { margin-bottom: -@linkHeight * 4; }
+
+	&:after {
+		content: '';
+		display: block;
+		height: @linkHeight * 12; 
+
+		@media @two   { height: @linkHeight * 8; }
+		@media @three { height: @linkHeight * 5; }
+		@media @five  { height: @linkHeight * 4; }
+	}
+
+	.transition(background-color 10s linear);
+
+	background-color: @red;
+
+	.red &    { background-color: @red; }
+	.yellow & { background-color: @yellow; }
+	.green &  { background-color: @green; }
+	.blue &   { background-color: @blue; }
+	.violet & { background-color: @violet; }
+	.pink &   { background-color: @pink; }
+
+	.inverse &{
+		background-color: white !important;
+	}
+
+	.inverting &{
+		.transitionOverride(background-color .5s ease);
+	}
+}
+
+h1, h2{
+	font-family: karlabold;
+	font-weight: normal;
+	margin: 0;
+}
+
+.title{
+	position: relative;
+	padding: 0 15px;
+	height: @titleHeight_small;
+
+	@media @two{ height: @titleHeight_large; }
+
+	p{
+		position: absolute;
+		color: white;
+		bottom: -50px;
+		left: 10px;
+
+		@media @two{
+			bottom: -5px;
+			left: 90px;
+		}
+
+		.inverse &{
+
+			.transition(color 10s linear);
+
+			color: @red;
+
+			.red &    { color: @red; }
+			.yellow & { color: @yellow; }
+			.green &  { color: @green; }
+			.blue &   { color: @blue; }
+			.violet & { color: @violet; }
+			.pink &   { color: @pink; }
+		}
+
+		.inverting &{
+			.transitionOverride(color .5s ease);
+		}
+	}
+}
+
+h1{
+	font-size: 50px;
+	line-height: @titleHeight_small;
+	color: white;
+
+	@media @two{
+		font-size: 200px;
+		line-height: @titleHeight_large;
+	}
+
+	.inverse &{
+
+		.transition(color 10s linear);
+
+		color: @red;
+
+		.red &    { color: @red; }
+		.yellow & { color: @yellow; }
+		.green &  { color: @green; }
+		.blue &   { color: @blue; }
+		.violet & { color: @violet; }
+		.pink &   { color: @pink; }
+	}
+
+	.inverting &{
+		.transitionOverride(color .5s ease);
+	}
+}
+
+.grid{
+	position: absolute;
+	width: ~'calc(100% - 20px)';
+	bottom: 91px;
+	left: 10px;
+}
+
+a{
+	color: white;
+	position: relative;
+	float: left;
+	text-decoration: none;
+	padding: 0 15px;
+	width: 100%;
+
+	@media @two   { width: 50%; }
+	@media @three { width: 33.33333%; }
+	@media @five  { width: 20%; }
+
+	&:hover .hover{
+		height: 100%;
+	}
+
+	.inverse &{
+
+		.transition(color 10s linear);
+
+		color: @red;
+
+		.red &    { color: @red; }
+		.yellow & { color: @yellow; }
+		.green &  { color: @green; }
+		.blue &   { color: @blue; }
+		.violet & { color: @violet; }
+		.pink &   { color: @pink; }
+	}
+
+	.inverting &{
+		.transitionOverride(color .5s ease);
+	}
+
+}
+
+.show{
+	z-index: 1;
+}
+
+.hover{
+	width: ~'calc(100% - 30px)';
+	position: absolute;
+	height: 1px;
+	overflow: hidden;
+	top: 0;
+	left: 15px;
+	z-index: 2;
+	background-color: white;
+	@hoverTransition: ~'height .25s ease, color 10s linear';
+	.transition(@hoverTransition);
+
+	color: @red;
+
+	.red &    { color: @red; }
+	.yellow & { color: @yellow; }
+	.green &  { color: @green; }
+	.blue &   { color: @blue; }
+	.violet & { color: @violet; }
+	.pink &   { color: @pink; }
+
+	.inverse &{
+		color: white !important;
+
+		@hoverInverseTransition: ~'height .25s ease, background-color 10s linear';
+		.transition(@hoverInverseTransition);
+
+		background-color: @red;
+
+		.red &    { background-color: @red; }
+		.yellow & { background-color: @yellow; }
+		.green &  { background-color: @green; }
+		.blue &   { background-color: @blue; }
+		.violet & { background-color: @violet; }
+		.pink &   { background-color: @pink; }
+	}
+
+	.inverting &{
+		@hoverInvertingTransition: ~'height .25s ease, background-color .5s linear, color .5s ease';
+		.transitionOverride(@hoverInvertingTransition);
+	}
+}
+
+h2{
+	font-size: 24px;
+	padding: 29px 0 2px;
+}
+
+p{
+	font-size: 12px;
+	margin: 0;
+	padding: 3px 0 25px
+}
+
+.footer{
+	width: ~'calc(100% - 50px)';
+	height: 91px;
+	position: absolute;
+	bottom: 0;
+	left: 25px;
+	border-top: 1px solid;
+	border-color: white;
+	font-size: 12px;
+	color: white;
+
+	.inverse &{
+
+		@footerInverseTransition: ~'color 10s linear, border-color 10s linear';
+		.transition(@footerInverseTransition);
+
+		color: @red;
+		border-color: @red;
+
+		.red &    { color: @red;   border-color: @red; }
+		.yellow & { color: @yellow;  border-color: @yellow; }
+		.green &  { color: @green;   border-color: @green; }
+		.blue &   { color: @blue;  border-color: @blue; }
+		.violet & { color: @violet;   border-color: @violet; }
+		.pink &   { color: @pink; border-color: @pink; }
+	}
+
+	.inverting &{
+		@footerInvertingTransition: ~'color .5s linear, border-color .5s linear';
+		.transitionOverride(@footerInvertingTransition);
+	}
+
+	.heart {
+		position: relative;
+		fill: white;
+		width: 20px;
+		height: 43px;
+		margin-top: 20px;
+
+		.inverse &{
+
+			.transition(fill 10s linear);
+
+			fill: @red;
+
+			.red &    { fill: @red; }
+			.yellow & { fill: @yellow; }
+			.green &  { fill: @green; }
+			.blue &   { fill: @blue; }
+			.violet & { fill: @violet; }
+			.pink &   { fill: @pink; }
+		}
+
+		.inverting &{
+			.transitionOverride(fill .5s ease);
+		}
+	}
+
+	.copyright{
+		float: right;
+		margin-top: 32px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
